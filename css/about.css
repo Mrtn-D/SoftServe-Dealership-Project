@@ -1,0 +1,8 @@
+#aboutUs {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 200px;
+    min-height: 100vh;
+}
