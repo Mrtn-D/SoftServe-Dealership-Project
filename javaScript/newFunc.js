@@ -22,4 +22,9 @@ $(document).ready(function () {
         $(".dropD").slideUp(500);
     });
 
+
+    $(".title").click(function () {
+        $(".content").toggle(300);
+    });
+
 });
