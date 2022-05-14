@@ -8,10 +8,16 @@ header {
     background-color: aquamarine    ;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    transition: 1s ease;
+    z-index: 100;
 }
 
 nav{
     padding-right: 30px;
+    position: relative;
+    display: flex;
 }
 .new-delivery {
     min-height: 100vh;
@@ -140,4 +146,41 @@ nav a {
 
 nav a:hover{
     background-color:#27ae60 ;
+}
+
+.green{
+    background: transparent;
+}
+
+.green #dName {
+    color: white;
+    transition: 1s ease;
+}
+
+.zooming{
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.zooming img{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.dropD {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+}
+
+
+.wrapper{
+    position: relative;
+    max-width: 120px;
 }

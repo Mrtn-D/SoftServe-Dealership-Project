@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Dealership</title>
 </head>
 
@@ -18,15 +18,24 @@
             <a href="/index.html">HOME</a>
             <a href="/html/about.html">ABOUT</a>
             <a href="/html/contacts.html">CONTACT</a>
-            <a href="/html/cars.html">CARS</a>
+            <div class="wrapper">
+                <a href="/html/cars.html" class="main">VEHICLES</a>
+                <div class="dropD">
+                <a href="">MOTORCYCLES</a>
+                <a href="">CARS</a>
+            </div>
+            </div>
         </nav>
     </header>
+    <section class="zooming">
+        <img src="/resource/homePagePhoto.jpg" alt="GTR photo">
+    </section>
     <section class="new-delivery">
         <div>
-            <h2>New Delivery soon!</h2>
-            <div class="countdown">
-                <div class="container-day">
-                    <h3 class="day">Time</h3>
+                <h2>New Delivery soon!</h2>
+                <div class="countdown">
+                    <div class="container-day">
+                        <h3 class="day">Time</h3>
                     <h3>Day</h3>
                 </div>
                 <div class="container-hour">
@@ -65,6 +74,7 @@
         </div>
     </footer>
     <script src="/javaScript/app.js"></script>
+    <script src="/javaScript/newFunc.js"></script>
 </body>
 
 </html>

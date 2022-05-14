@@ -1,5 +1,5 @@
 function countdown() {
-    const countDate = new Date("May 3, 2022 00:00:00").getTime();
+    const countDate = new Date("June 28, 2022 00:00:00").getTime();
     const now = new Date().getTime();
     const gap = countDate - now;
     const second = 1000;
@@ -20,7 +20,7 @@ function countdown() {
 };
 setInterval(countdown, 1000);
 
-    
+
 let i = 0;
 let carPics = [];
 let time = 2000;
