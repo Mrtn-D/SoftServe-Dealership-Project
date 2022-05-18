@@ -22,25 +22,51 @@ setInterval(countdown, 1000);
 
 
 let i = 0;
-let carPics = [];
-let time = 2000;
+let carPics =
+    [{ name: "mercedes", value: "../resource/Mercedes Maybach S600.png" },
+    { name: "audi", value: "../resource/Audi s4.png" },
+    { name: "vw", value: "../resource/Volkswagen golf.png" },
+    { name: "tesla", value: "../resource/Tesla Model X.png" },
+    { name: "mazda", value: "../resource/Mazda 6.png" }];
+let time = 1500;
+let slideshow;
 
-carPics[0] = "../resource/Mercedes Maybach S600.png";
-carPics[1] = "../resource/Audi s4.png";
-carPics[2] = "../resource/Volkswagen golf.png";
-carPics[3] = "../resource/Tesla Model X.png";
-carPics[4] = "../resource/Mazda 6.png";
+
 
 function changePic() {
-    document.slider.src = carPics[i];
-
+    document.slider.src = carPics[i].value;
+    document.slider.setAttribute("data-car", carPics[i].name);
     if (i < carPics.length - 1) {
         i++;
     } else {
         i = 0;
     }
-
-    setTimeout("changePic()", time);
+    slideshow = setTimeout("changePic()", time);
 }
 
 window.onload = changePic;
+
+$(document).ready(function () {
+
+    $("#carSlider").mouseenter(function () {
+        clearInterval(slideshow);
+    });
+
+    $("#carSlider").mouseleave(function () {
+        slideshow = setTimeout("changePic()", time);
+    });
+
+    $("#carSlider").click(function () {
+        let currentCar = $("#carSlider").attr("data-car");
+        window.location.href = `/html/cars.html?car=${currentCar}`
+    });
+
+
+    $(window).scroll(function () {
+        let ind = $(window).scrollTop();
+        $(".zooming img").css({
+            width: (100 + ind / 5) + "%"
+        });
+    });
+
+});

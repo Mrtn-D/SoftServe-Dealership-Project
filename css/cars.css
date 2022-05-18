@@ -24,6 +24,7 @@
 }
 section{
     margin-left: 25%;
+    
 }
 
 #scrollToTop{
@@ -42,4 +43,21 @@ section{
 }
 #scrollToTop:hover{
 background-color: #27ae60;
+}
+
+.content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 200px;
+    padding-top: 100px;
+    display: none;
+    
+}
+
+.vehicles{
+    margin-bottom: 100px;
+    position: relative;
+    max-width: 500px;
+    
 }

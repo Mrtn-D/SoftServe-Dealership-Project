@@ -8,14 +8,20 @@
 }
 
 .moreInfo{
+    width: 1000px;
+    height: 100px;
+    border-radius: 6px;
     margin-bottom: 250px;
     min-height: 150px;
     font-size: 40px;
+    padding-left: 20px;
 }
 
 .content{
     display: none;
     text-decoration: bold;
+    text-align: left;
+    opacity: 0;
 }
 
 .title{

@@ -18,4 +18,26 @@ function backToTop() {
         top: 0,
         behavior: "smooth"
     });
-}
+};
+
+
+$(document).ready(function () {
+    if (window.location.search.includes("car")) {
+        let car = window.location.search.split("=")[1];
+        let currentImg = document.querySelectorAll(`[data-car=${car}]`)[0];
+
+        $([document.documentElement, document.body]).animate({
+            scrollTop: $(currentImg).offset().top
+        }, 2000);
+    };
+
+    $("article").on("mouseenter", function () {
+        $(this).children('.content').css("display", "block");
+        $(this).children(".stock").css("opacity", "0.2");
+    });
+    $("article").on("mouseleave", function () {
+        $(this).children('.content').css("display", "none");
+        $(this).children(".stock").css("opacity", "1");
+    });
+
+});
