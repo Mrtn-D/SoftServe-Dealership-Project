@@ -24,7 +24,7 @@ function backToTop() {
 $(document).ready(function () {
     if (window.location.search.includes("car")) {
         let car = window.location.search.split("=")[1];
-        let currentImg = document.querySelectorAll(`[data-car=${car}]`);
+        let currentImg = document.querySelectorAll(`[data-car=${car}]`)[0];
 
         $([document.documentElement, document.body]).animate({
             scrollTop: $(currentImg).offset().top

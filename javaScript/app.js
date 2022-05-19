@@ -58,7 +58,7 @@ $(document).ready(function () {
 
     $("#carSlider").click(function () {
         let currentCar = $("#carSlider").attr("data-car");
-        window.location.href = `/html/cars.html?car=${currentCar}`
+        window.location.href = `/SoftServe-Dealership-Project/html/cars.html?car=${currentCar}`
     });
 
 
