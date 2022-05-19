@@ -24,7 +24,7 @@ function backToTop() {
 $(document).ready(function () {
     if (window.location.search.includes("car")) {
         let car = window.location.search.split("=")[1];
-        let currentImg = document.querySelectorAll(`[data-car=${car}]`)[0];
+        let currentImg = document.querySelectorAll(`[data-car=${car}]`);
 
         $([document.documentElement, document.body]).animate({
             scrollTop: $(currentImg).offset().top
@@ -32,11 +32,11 @@ $(document).ready(function () {
     };
 
     $("article").on("mouseenter", function () {
-        $(this).children('.content').css("display", "block");
+        $(this).children(".content").css("display", "block");
         $(this).children(".stock").css("opacity", "0.2");
     });
     $("article").on("mouseleave", function () {
-        $(this).children('.content').css("display", "none");
+        $(this).children(".content").css("display", "none");
         $(this).children(".stock").css("opacity", "1");
     });
 

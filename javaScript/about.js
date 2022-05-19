@@ -14,6 +14,6 @@ typing()
 $(document).ready(function () {
 
     $(".title").click(function () {
-        $(".content").toggle(400,).animate({opacity: '1'});
+        $(".content").toggle(400).animate({opacity: '1'});
     });
 });

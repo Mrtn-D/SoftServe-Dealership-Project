@@ -23,11 +23,11 @@ setInterval(countdown, 1000);
 
 let i = 0;
 let carPics =
-    [{ name: "mercedes", value: "../resource/Mercedes Maybach S600.png" },
-    { name: "audi", value: "../resource/Audi s4.png" },
-    { name: "vw", value: "../resource/Volkswagen golf.png" },
-    { name: "tesla", value: "../resource/Tesla Model X.png" },
-    { name: "mazda", value: "../resource/Mazda 6.png" }];
+    [{ name: "mercedes", value: "./resource/Mercedes Maybach S600.png" },
+    { name: "audi", value: "./resource/Audi s4.png" },
+    { name: "vw", value: "./resource/Volkswagen golf.png" },
+    { name: "tesla", value: "./resource/Tesla Model X.png" },
+    { name: "mazda", value: "./resource/Mazda 6.png" }];
 let time = 1500;
 let slideshow;
 
